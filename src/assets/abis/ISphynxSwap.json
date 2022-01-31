@@ -1,0 +1,601 @@
+{
+  "contractName": "ISphynxSwap",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        }
+      ],
+      "name": "mintTo",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "burn",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.4+commit.1dca32f3\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"mintTo\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"burn(uint256)\":{\"details\":\"Burn `amount` tokens and decreasing the total supply.\"},\"mintTo(uint256,address)\":{\"details\":\"Creates `amount` tokens and assigns them to `recipient`, increasing the total supply.     * Requirements     * - `msg.sender` must be the token owner - `_mintable` must be true\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/ISphynxSwap.sol\":\"ISphynxSwap\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/ISphynxSwap.sol\":{\"keccak256\":\"0xf075693f44df564354c672559343b65a329cc58605e33c02b4cc0608274e5c40\",\"urls\":[\"bzz-raw://9905eb9d77e459e34bbfd4e1be6c0e3413a3e59c2b805f0ad0d0a493e832da77\",\"dweb:/ipfs/QmcWjvbwSjr9AJr99aiSbkwyDc4X5DYmGiWDR1QHyGhq2J\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.6.4;\n\ninterface ISphynxSwap {\n    /**\n     * @dev Creates `amount` tokens and assigns them to `recipient`, increasing\n     * the total supply.\n     *\n     * Requirements\n     *\n     * - `msg.sender` must be the token owner\n     * - `_mintable` must be true\n     */\n    function mintTo(uint256 amount, address recipient) external returns (bool);\n\n    /**\n    * @dev Burn `amount` tokens and decreasing the total supply.\n    */\n    function burn(uint256 amount) external returns (bool);\n}\n",
+  "sourcePath": "/home/dev1121/work/sphynx/eth-bsc-swap-contracts/contracts/interfaces/ISphynxSwap.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/ISphynxSwap.sol",
+    "exportedSymbols": {
+      "ISphynxSwap": [
+        2992
+      ]
+    },
+    "id": 2993,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2973,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:19"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 2992,
+        "linearizedBaseContracts": [
+          2992
+        ],
+        "name": "ISphynxSwap",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 2974,
+              "nodeType": "StructuredDocumentation",
+              "src": "52:230:19",
+              "text": "@dev Creates `amount` tokens and assigns them to `recipient`, increasing\nthe total supply.\n     * Requirements\n     * - `msg.sender` must be the token owner\n- `_mintable` must be true"
+            },
+            "functionSelector": "b723b34e",
+            "id": 2983,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mintTo",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2979,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2976,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2983,
+                  "src": "303:14:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2975,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "303:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2978,
+                  "name": "recipient",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2983,
+                  "src": "319:17:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2977,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "319:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "302:35:19"
+            },
+            "returnParameters": {
+              "id": 2982,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2981,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2983,
+                  "src": "356:4:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2980,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "356:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "355:6:19"
+            },
+            "scope": 2992,
+            "src": "287:75:19",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 2984,
+              "nodeType": "StructuredDocumentation",
+              "src": "368:75:19",
+              "text": "@dev Burn `amount` tokens and decreasing the total supply."
+            },
+            "functionSelector": "42966c68",
+            "id": 2991,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2987,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2986,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2991,
+                  "src": "462:14:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2985,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "462:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "461:16:19"
+            },
+            "returnParameters": {
+              "id": 2990,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2989,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2991,
+                  "src": "496:4:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2988,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "496:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "495:6:19"
+            },
+            "scope": 2992,
+            "src": "448:54:19",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2993,
+        "src": "24:480:19"
+      }
+    ],
+    "src": "0:505:19"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/interfaces/ISphynxSwap.sol",
+      "exportedSymbols": {
+        "ISphynxSwap": [
+          2992
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".4"
+          ]
+        },
+        "id": 2973,
+        "name": "PragmaDirective",
+        "src": "0:22:19"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            2992
+          ],
+          "name": "ISphynxSwap",
+          "scope": 2993
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "b723b34e",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "mintTo",
+              "overrides": null,
+              "scope": 2992,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@dev Creates `amount` tokens and assigns them to `recipient`, increasing\nthe total supply.\n     * Requirements\n     * - `msg.sender` must be the token owner\n- `_mintable` must be true"
+                },
+                "id": 2974,
+                "name": "StructuredDocumentation",
+                "src": "52:230:19"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "amount",
+                      "overrides": null,
+                      "scope": 2983,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 2975,
+                        "name": "ElementaryTypeName",
+                        "src": "303:7:19"
+                      }
+                    ],
+                    "id": 2976,
+                    "name": "VariableDeclaration",
+                    "src": "303:14:19"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "recipient",
+                      "overrides": null,
+                      "scope": 2983,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 2977,
+                        "name": "ElementaryTypeName",
+                        "src": "319:7:19"
+                      }
+                    ],
+                    "id": 2978,
+                    "name": "VariableDeclaration",
+                    "src": "319:17:19"
+                  }
+                ],
+                "id": 2979,
+                "name": "ParameterList",
+                "src": "302:35:19"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "overrides": null,
+                      "scope": 2983,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 2980,
+                        "name": "ElementaryTypeName",
+                        "src": "356:4:19"
+                      }
+                    ],
+                    "id": 2981,
+                    "name": "VariableDeclaration",
+                    "src": "356:4:19"
+                  }
+                ],
+                "id": 2982,
+                "name": "ParameterList",
+                "src": "355:6:19"
+              }
+            ],
+            "id": 2983,
+            "name": "FunctionDefinition",
+            "src": "287:75:19"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "42966c68",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "burn",
+              "overrides": null,
+              "scope": 2992,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@dev Burn `amount` tokens and decreasing the total supply."
+                },
+                "id": 2984,
+                "name": "StructuredDocumentation",
+                "src": "368:75:19"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "amount",
+                      "overrides": null,
+                      "scope": 2991,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 2985,
+                        "name": "ElementaryTypeName",
+                        "src": "462:7:19"
+                      }
+                    ],
+                    "id": 2986,
+                    "name": "VariableDeclaration",
+                    "src": "462:14:19"
+                  }
+                ],
+                "id": 2987,
+                "name": "ParameterList",
+                "src": "461:16:19"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "overrides": null,
+                      "scope": 2991,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 2988,
+                        "name": "ElementaryTypeName",
+                        "src": "496:4:19"
+                      }
+                    ],
+                    "id": 2989,
+                    "name": "VariableDeclaration",
+                    "src": "496:4:19"
+                  }
+                ],
+                "id": 2990,
+                "name": "ParameterList",
+                "src": "495:6:19"
+              }
+            ],
+            "id": 2991,
+            "name": "FunctionDefinition",
+            "src": "448:54:19"
+          }
+        ],
+        "id": 2992,
+        "name": "ContractDefinition",
+        "src": "24:480:19"
+      }
+    ],
+    "id": 2993,
+    "name": "SourceUnit",
+    "src": "0:505:19"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.4+commit.1dca32f3.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-10-08T09:42:30.408Z",
+  "devdoc": {
+    "methods": {
+      "burn(uint256)": {
+        "details": "Burn `amount` tokens and decreasing the total supply."
+      },
+      "mintTo(uint256,address)": {
+        "details": "Creates `amount` tokens and assigns them to `recipient`, increasing the total supply.     * Requirements     * - `msg.sender` must be the token owner - `_mintable` must be true"
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

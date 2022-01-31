@@ -1,0 +1,4 @@
+.TVChartContainer {
+	display: flex;
+	flex-direction: column;
+}
